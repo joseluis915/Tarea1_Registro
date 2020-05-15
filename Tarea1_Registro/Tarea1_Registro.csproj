@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="icons8-búsqueda-50.png" />
+    <None Remove="icons8-contactos-50.png" />
+    <None Remove="icons8-crear-nuevo-30.png" />
+    <None Remove="icons8-eliminar-50.png" />
+    <None Remove="icons8-guardar-48.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="icons8-búsqueda-50.png" />
+    <Resource Include="icons8-contactos-50.png" />
+    <Resource Include="icons8-crear-nuevo-30.png" />
+    <Resource Include="icons8-eliminar-50.png" />
+    <Resource Include="icons8-guardar-48.png" />
+  </ItemGroup>
+
+</Project>

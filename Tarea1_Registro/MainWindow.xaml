@@ -1,0 +1,99 @@
+﻿<Window x:Class="Tarea1_Registro.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tarea1_Registro"
+        mc:Ignorable="d"
+        Title="REGISTRO DE ENTRADAS" Height="450" Width="450" ResizeMode="CanResizeWithGrip" SizeToContent="WidthAndHeight" Icon="/icons8-contactos-50.png" WindowStartupLocation="CenterScreen" Cursor="Pen">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal" Height="30" Margin="10,5,10,0">
+                <Label Content="ID Entrada" FontWeight="Bold" Height="35" FontSize="18" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Height="35" Margin="10,0,10,0">
+                <TextBox Text="0" Width="230" FontSize="20" Background="#0C000000" Height="35" VerticalContentAlignment="Center" FontWeight="Bold" Foreground="#B2000000" Padding="10,0,0,0"/>
+                <Button Margin="50,0,0,0" Width="120" Background="#26000000" BorderBrush="#FFABADB3" >
+                    <StackPanel Orientation="Horizontal" Width="120">
+                        <Image Source="/icons8-búsqueda-50.png" Height="30" />
+                        <Label Content="Consultar" FontSize="17" FontWeight="Bold" FontStyle="Normal" Padding="5,0,0,0" VerticalContentAlignment="Center" Foreground="#CC000000" />
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Height="30" Margin="10,5,10,0">
+                <Label Content="Fecha" FontWeight="Bold" Height="35" FontSize="18" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Height="35" Margin="10,0,10,0">
+                <DatePicker Height="35" Width="430" Background="#FFE2E2E2" FontSize="18" IsTodayHighlighted="True" SelectedDateFormat="Short" VerticalContentAlignment="Center" Padding="10,0,0,0" Focusable="False" FontWeight="Bold" Foreground="#B2000000"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Height="30" Margin="10,5,10,0">
+                <Label Content="ID Suplidor" FontWeight="Bold" Height="30" FontSize="18" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Height="35" Margin="10,0,10,0">
+                <ComboBox Height="35" Width="430" BorderBrush="#66000000" Background="#66000000" FontSize="18" FontWeight="Bold" VerticalContentAlignment="Center" Padding="10,0,0,0" Foreground="#B2000000">
+                    <ComboBoxItem Content="Suplidor 1"/>
+                    <ComboBoxItem Content="Suplidor 2"/>
+                    <ComboBoxItem Content="Suplidor 3"/>
+                </ComboBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Height="30" Margin="10,5,10,0">
+                <Label Content="ID Cacao" FontWeight="Bold" Height="35" FontSize="18" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Height="35" Margin="10,0,10,0">
+                <ComboBox Height="35" Width="430" VerticalContentAlignment="Center" FontSize="18" Padding="10,0,0,0" Foreground="#B2000000" FontWeight="Bold">
+                    <ComboBoxItem Content="Cacao 1"/>
+                    <ComboBoxItem Content="Cacao 2"/>
+                    <ComboBoxItem Content="Cacao 3"/>
+                </ComboBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Height="30" Margin="10,5,10,0">
+                <Label Content="Cantidad" FontWeight="Bold" FontSize="18" Width="200" Margin="0,0,30,0" HorizontalContentAlignment="Center"/>
+                <Label Content="TOTAL" FontWeight="Bold" FontSize="18" Width="200" HorizontalContentAlignment="Center" Foreground="#FF007800"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Height="35" Margin="10,0,10,0">
+                <TextBox Height="35" FontSize="18" Background="#0C000000" Width="200" Margin="0,0,30,0" Text="0" TextChanged="TextBox_TextChanged" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" Foreground="#B2000000"/>
+                <TextBox Height="35" FontSize="18" Background="#4C009600" Width="200" Text="0.00" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" Foreground="#FF007800"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Height="35" Margin="10,15,10,0">
+                <Button Width="130" Background="#7F0A95E4" >
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/icons8-crear-nuevo-30.png" Height="30"/>
+                        <Label Content="Nuevo" FontSize="17" FontWeight="Bold" Foreground="#CC000000" Padding="5,0,0,0" VerticalContentAlignment="Center" Grid.IsSharedSizeScope="True"/>
+                    </StackPanel>
+                </Button>
+
+                <Button Margin="20,0,0,0" Width="130" Background="#FFE4E4E4" >
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/icons8-guardar-48.png" OpacityMask="Black" Height="30"/>
+                        <Label Content="Guardar" FontSize="17" FontWeight="Bold" Padding="5,0,0,0" Grid.IsSharedSizeScope="True" VerticalContentAlignment="Center" Foreground="#CC000000"/>
+                    </StackPanel>
+                </Button>
+
+                <Button Margin="20,0,0,0" Width="130" Background="#66FF0000" Click="Button_Click" >
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/icons8-eliminar-50.png" Height="30"/>
+                        <Label Content="Eliminar" FontSize="17" FontWeight="Bold" Foreground="#CC000000" Padding="0,0,0,0" VerticalContentAlignment="Center" Grid.IsSharedSizeScope="True"/>
+                    </StackPanel>
+                </Button>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Height="25" Margin="10,5,10,0">
+                <Label Content="Creacion: 14/05/2020" FontWeight="Bold" Height="25" FontSize="11" FontStyle="Italic" Foreground="#99000000" Padding="5,5,5,5" Width="143"/>
+                <Label Content="©2020 José Luis Hernández" FontWeight="Bold" Height="25" FontSize="11" FontStyle="Italic" Foreground="#99000000" Width="153" HorizontalContentAlignment="Center"  />
+                <Label Content="Version: Beta 1.0" FontWeight="Bold" Height="25" FontSize="11" FontStyle="Italic" Foreground="#99000000" Width="133" HorizontalContentAlignment="Right"/>
+            </StackPanel>
+
+        </StackPanel>
+    </Grid>
+</Window>
